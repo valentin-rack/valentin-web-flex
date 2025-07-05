@@ -1,0 +1,414 @@
+/* ================================
+            RESET CSS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* ================================
+            BODY
+================================ */
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color:antiquewhite;
+    margin: 0;
+}
+
+
+
+/* ================================
+            GRID
+================================ */
+
+.index .my-container , 
+.projects .my-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (5, auto);
+    gap: 5px;
+    padding: 10px;
+    height: 100vh;
+    grid-template-areas: 
+        "header"
+        "nav-bar"
+        "main"
+        "sidebar"
+        "footer";
+    ;
+}
+
+.about .my-container ,
+.gallery .my-container ,
+.contact .my-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (4, auto);
+    gap: 5px;
+    padding: 10px;
+    height: 100vh;
+    grid-template-areas: 
+        "header"
+        "nav-bar"
+        "main"
+        "footer";
+    ;
+}
+
+
+@media (min-width: 768px) {
+  .index .my-container, 
+  .projects .my-container {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        grid-template-rows: repeat (4, auto);
+        gap: 5px;
+        padding: 10px;
+        height: 100vh;
+        grid-template-areas: 
+        "header header"
+        "nav-bar nav-bar"
+        "main sidebar"
+        "footer footer"
+        ;
+  }
+
+}
+
+.header {grid-area:header;}
+.nav-bar {grid-area:nav-bar;}
+.main {grid-area:main;}
+.sidebar {grid-area:sidebar;}
+.footer {grid-area:footer;}
+
+
+
+/* ================================
+            HEADER
+================================ */
+
+.header {
+    background-color:rgb(217, 232, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-weight: 900;
+    font-size: 32px;
+}
+
+
+
+
+/* ================================
+            NAV-BAR
+================================ */
+
+.nav-bar {
+    background-color:rgb(255, 249, 179);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.nav-bar a.active {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.nav-bar a:hover {
+    color: rgb(218, 23, 23);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+@media (min-width: 480px) {
+    .nav-bar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-bar {
+        justify-content: start;
+        padding-left: 20px;
+    }
+}
+
+
+
+/* ================================
+            MAIN
+================================ */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color:floralwhite;
+    padding: 15px; 
+    gap: 30px;
+}
+
+.post {
+    background-color: floralwhite;
+    padding: 10px;
+}
+
+.post h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 900;
+    line-height: 1.2rem;
+}
+
+.post-content, 
+.post-projects,
+.post-about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.post-content img,
+.post-projects img,
+.post-about img {
+    width: 100%;
+    height: auto;
+}
+
+.post-content p,
+.post-projects div,
+.post-about p {
+    width: 100%;
+    font-size: 12px;
+}
+
+
+@media (min-width: 1024px) {
+    .post-content,
+    .post-projects,
+    .post-about {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .post-content img {
+        width: 75%;
+        height: auto;
+    }
+
+    .post-content p {
+        width: 25%;
+        font-size: 12px;
+    }
+
+    .post-projects img,
+    .post-about img {
+        width: 50%;
+        height: auto;
+    }
+
+    .post-projects div,
+    .post-about p {
+        width: 50%;
+        font-size: 12px;
+    }
+}
+
+
+/* projects */
+.project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-description ul {
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+
+/* gallery */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px;
+}
+
+.gallery-container img {
+    height: 200px; 
+    width: auto;   
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.02);
+    filter: saturate(0.6) brightness(1.75);
+}
+
+
+/* contact*/
+.formulario {
+    max-width: 600px;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-container label {
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-container button {
+    font-weight: 900;
+    background-color: rgb(172, 172, 172);
+    border: none;
+}
+
+.form-container button:hover {
+    background-color: #7f7f7f;
+}
+
+::placeholder {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 12px;
+}
+
+
+
+
+/* ================================
+            SIDEBAR
+================================ */
+
+.sidebar {
+    background-color: #e8e8e8;
+    color: #484848;
+    padding: 15px;
+}
+
+.sidebar h3 {
+    font-size: 14px;
+    font-weight: 900;
+
+}
+
+.sidebar form {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 10px;
+    margin: 10px 5px;
+}
+
+input::placeholder,
+textarea::placeholder {                  
+    font-size: 11px;
+    padding:3px;
+}
+
+input[type="submit"] {
+    color: #484848;
+    font-size: 12px;
+}
+
+
+
+
+/* ================================
+            FOOTER
+================================ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #a4a4a4;
+    font-size: 13px;
+    padding: 20px;
+    gap: 0px;
+}
+
+.footer-links a {
+    color: #a4a4a4;
+    text-decoration: none;
+    margin: 0 2px;
+    transition: color 1s ease;
+}
+
+.footer-links a:hover {
+    color: #363636;
+    font-weight: 900;
+}
+
+.footer-logo svg {
+  width: 35px;
+  height: auto;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+}
+
+
+
+/* ================================
+        BOOTSTRAP TOAST
+================================ */
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.toast-header strong {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+}
+
+.toast {
+  background-color: rgba(255, 255, 255, 0.6); 
+  animation: slideInUp 0.5s ease-out;
+}

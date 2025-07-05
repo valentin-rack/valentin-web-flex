@@ -1,0 +1,32 @@
+/* ================================
+            FOOTER
+================================ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #a4a4a4;
+    font-size: 13px;
+    padding: 20px;
+    gap: 0px;
+}
+
+.footer-links a {
+    color: #a4a4a4;
+    text-decoration: none;
+    margin: 0 2px;
+    transition: color 1s ease;
+}
+
+.footer-links a:hover {
+    color: #363636;
+    font-weight: 900;
+}
+
+.footer-logo svg {
+  width: 35px;
+  height: auto;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+}

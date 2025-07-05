@@ -1,0 +1,63 @@
+/* ================================
+            GRID
+================================ */
+
+.index .my-container , 
+.projects .my-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (5, auto);
+    gap: 5px;
+    padding: 10px;
+    height: 100vh;
+    grid-template-areas: 
+        "header"
+        "nav-bar"
+        "main"
+        "sidebar"
+        "footer";
+    ;
+}
+
+.about .my-container ,
+.gallery .my-container ,
+.contact .my-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (4, auto);
+    gap: 5px;
+    padding: 10px;
+    height: 100vh;
+    grid-template-areas: 
+        "header"
+        "nav-bar"
+        "main"
+        "footer";
+    ;
+}
+
+
+@media (min-width: 768px) {
+  .index .my-container, 
+  .projects .my-container {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        grid-template-rows: repeat (4, auto);
+        gap: 5px;
+        padding: 10px;
+        height: 100vh;
+        grid-template-areas: 
+        "header header"
+        "nav-bar nav-bar"
+        "main sidebar"
+        "footer footer"
+        ;
+  }
+
+}
+
+.header {grid-area:header;}
+.nav-bar {grid-area:nav-bar;}
+.main {grid-area:main;}
+.sidebar {grid-area:sidebar;}
+.footer {grid-area:footer;}

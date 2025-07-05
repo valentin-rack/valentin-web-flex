@@ -1,0 +1,27 @@
+/* ================================
+            HEADER
+================================ */
+
+.header {
+    background-color:rgb(217, 232, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-weight: 900;
+    font-size: 32px;
+    animation: flipY 8s ease-in-out infinite;
+    display: inline-block;
+    transform-style: preserve-3d;
+}
+
+@keyframes flipY {
+    0%, 88%, 100% {
+        transform: rotateY(0deg);
+    }
+    94% {
+        transform: rotateY(360deg);
+    }
+}

@@ -1,0 +1,49 @@
+/* ================================
+            NAV-BAR
+================================ */
+
+.nav-bar {
+    background-color:rgb(255, 249, 179);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y transform */
+    display: inline-block;
+}
+
+.nav-bar a.active {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.nav-bar a:hover {
+    color: rgb(218, 23, 23);
+    text-transform: uppercase;
+    transform: scale(1.2);
+}
+
+@media (min-width: 480px) {
+    .nav-bar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-bar {
+        justify-content: start;
+        padding-left: 20px;
+    }
+}
