@@ -3,5 +3,5 @@ My first ever work in web development — pure HTML & CSS, no frameworks, no not
 
 <br>
  
-🌐 Hosted on GitHub Pages:<br>
+🌐 Live demo:<br>
 https://valentin-rack.github.io/valentin-web-flex/
